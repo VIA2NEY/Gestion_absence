@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Etudiant Page</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <style type="text/css">
+        body {
+            padding-bottom: 20px;
+        }
+
+        .navbar {
+            margin-bottom: 20px;
+        }
+
+        .navbar-laravel
+        {
+            box-shadow: 0 2px 4px rgba(0,0,0,.04);
+        }
+
+        .navbar-brand , .nav-link, .my-form, .login-form
+        {
+            font-family: Raleway, sans-serif;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            color: black; /* Remplacez "black" par la couleur de votre choix */
+        }
+
+        .disptext {
+            margin-left: 80px;
+        }
+
+        .tableau {
+            margin-left: 70px;
+            margin-right: 20px;
+            margin-bottom: 30px;
+        }
+
+
+        .card {
+            max-width: 600px;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    {% include 'Include/header_view.html' %}
+    <div class="container">
+        <center>
+            <h3>L'étudiant <b>Doe John</b></h3>
+
+            <!-- <div class="col-md-6 col-md-offset-3 well">
+                <img src="{{ url_for('static', filename='assets/Avatar.png') }}" height="250" width="250" class="pull-left" alt="Pas d'image" >
+                <p>Matricule : <b> 1001 </b></p>
+                <p>Nom : <b> Doe </b></p>
+                <p>Prenom : <b> John </b></p>
+                <p>Date de naissance : <b> 1999-12-31 </b></p>
+                <p>Email : <b> john.doe@example.com </b></p>
+                <p>Telephone : <b> 0758961324 </b></p>
+            </div> -->
+
+            <!-- <div class="row mb-3 text-center bg-light">
+
+                <div class="col-sm-6 col-lg-6 themed-grid-col">
+                    <img src="{{ url_for('static', filename='assets/Avatar.png') }}" height="250" width="250" class="pull-left" alt="Pas d'image" >
+                </div>
+
+                <div class="col-6 col-lg-2 themed-grid-col">
+                    <p>Matricule : <b> 1001 </b></p>
+                    <p>Nom : <b> Doe </b></p>
+                    <p>Prenom : <b> John </b></p>
+                    <p>Date de naissance : <b> 1999-12-31 </b></p>
+                    <p>Email : <b> john.doe@example.com </b></p>
+                    <p>Telephone : <b> 0758961324 </b></p>
+                </div>
+
+            </div> -->
+
+            <div class="card bg-light">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="{{ url_for('static', filename='assets/Avatar.png') }}" height="250" width="250" class="pull-left" alt="Photo de l'étudiant" >
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+
+                            <p>Matricule : <b> 1001 </b></p>
+                            <p>Nom : <b> Doe </b></p>
+                            <p>Prenom : <b> John </b></p>
+                            <p>Date de naissance : <b> 1999-12-31 </b></p>
+                            <p>Email : <b> john.doe@example.com </b></p>
+                            <p>Telephone : <b> 0758961324 </b></p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
+    
+            <h3>Votre table d'absence <b>Doe John</b></h3>
+            <br>           
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Module</th>
+                        <th>Date cour</th>
+                        <th>Heure debut</th>
+                        <th>Heure fin</th>
+                        <th>Type de cour</th>
+                        <th>Justifiee</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td> Analyse </td>
+                        <td> 28/06/2023 </td>
+                        <td> 13:30 </td>
+                        <td> 16:30 </td>
+                        <td>Cours </td>
+                        <td>en attente de validation</td>
+				    </tr>
+
+                    <tr>
+                        <td> Robotique </td>
+                        <td> 29/06/2023 </td>
+                        <td> 08:00 </td>
+                        <td> 12:00 </td>
+                        <td> Seminaire </td>
+                        <td> <a href='#'class='btn btn-info' >Justifié</a> </td>
+                        <!-- <button type="button" class="btn btn-outline-info mb-2">Info</button> -->
+				    </tr>
+                </tbody>
+            </table>
+        </center>
+    </div>
+
+
+</body>
+
+		

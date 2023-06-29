@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
+
+    <title>Creation enseignant</title>
+
+    <style type="text/css">
+        .formulaire {
+            margin-top: 20px;
+            margin-left: 320px;
+            margin-right: 60px;
+            margin-bottom: 30px;
+        }
+    </style>
+
+</head>
+<!-- <body class="bg-light"> -->
+<body>
+    {% include 'Include/navbar_viewadmin.html' %}
+
+    <div class="formulaire ">
+        <div class="col-md-7 col-lg-8 bg-light ">
+            <h4 class="mb-3">Creation d'un compte enseignant</h4>
+            <form class="needs-validation" novalidate>
+                <div class="row g-3">
+
+                    <div class="col-sm-6">
+                        <label for="firstName" class="form-label">Nom</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                        <div class="invalid-feedback">
+                            Un nom valide est obligatoire.
+                        </div>
+                    </div>
+        
+                    <div class="col-sm-6">
+                        <label for="lastName" class="form-label">Prenom</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                        <div class="invalid-feedback">
+                            Un prenom valide est obligatoire.
+                        </div>
+                    </div>
+                </div>  
+
+                <div class="col-sm-6">
+                    <label for="telephone" class="form-label">N° de Telephone</label>
+                    <input type="text" class="form-control" id="telephone" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                        Un numero valide est obligatoire.
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+                    <div class="input-group has-validation">
+  
+                      <span class="input-group-text">@</span>
+                      <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                      <div class="invalid-feedback">
+                          Please enter a valid email address for updates.
+                      </div>
+  
+                    </div>
+                    
+                </div>
+                <br>
+
+                <div class="col-12">
+                  <label for="username" class="form-label">Nom d'utilisateur</label>
+                  <div class="input-group has-validation">
+                    <!-- <span class="input-group-text">@</span> -->
+                    <input type="text" class="form-control" id="username" placeholder="Nom d'utilisateur" required>
+                    <div class="invalid-feedback">
+                      Votre nom d'utilisation is required.
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="row g-3">
+
+                    <div class="col-sm-6">
+                        <label for="firstName" class="form-label">Mot de passe</label>
+                        <input type="password" class="form-control" id="motdepass" placeholder="" value="" required>
+                        <div class="invalid-feedback">
+                            Un mot de passe valide est obligatoire.
+                        </div>
+                    </div>
+        
+                    <div class="col-sm-6">
+                        <label for="lastName" class="form-label">Confirmation</label>
+                        <input type="password" class="form-control" id="confirmationmdp" placeholder="" value="" required>
+                        <div class="invalid-feedback">
+                            La cofirmation du mot de passe est obligatoire.
+                        </div>
+                    </div>
+                </div> 
+                <br>
+
+                <div class="col-sm-6">
+                    <label for="lastName" class="form-label">Photo</label>
+                    <input type="file" name="inpFile" id="inpFile">
+                </div>
+      
+              <hr class="my-4">
+
+              <div class="form-group text-right">
+                <div class="col-sm-12">
+                    <input name="submit" type="submit" class="btn btn-primary " value="Enregistrer" />
+                    <input name="cancel" type="reset" class="btn btn-default " value="Annuler" />
+                </div>
+              </div>
+                
+      
+              <!-- <button class="w-100 btn btn-primary btn-lg" type="submit">Enregistrer</button> -->
+            </form>
+      
+            
+          </div>
+    </div>
+    
+
+
+    {% include 'Include/footer_view.html' %}
+
+</body>
+</html>

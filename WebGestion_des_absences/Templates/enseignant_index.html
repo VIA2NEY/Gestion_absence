@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Enseignant Page</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <style type="text/css">
+        body {
+            padding-bottom: 20px;
+        }
+
+        .navbar {
+            margin-bottom: 20px;
+        }
+
+        .navbar-laravel
+        {
+            box-shadow: 0 2px 4px rgba(0,0,0,.04);
+        }
+
+        .navbar-brand , .nav-link, .my-form, .login-form
+        {
+            font-family: Raleway, sans-serif;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            color: black; /* Remplacez "black" par la couleur de votre choix */
+        }
+
+        .disptext {
+            margin-left: 80px;
+        }
+
+        .tableau {
+            margin-left: 70px;
+            margin-right: 20px;
+            margin-bottom: 30px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+	
+	<div class="container">
+		
+		<!-- header -->
+		
+        {% include 'Include/header_view.html' %}
+		<!-- navbar -->
+		{% include 'Include/navbar_viewEns.html' %}
+		
+
+		<h4>Vos Modules</h4>
+
+        <h5>
+            <ul>
+                <li> Analyse</li>
+                <li> Reseaux Cisco</li>
+            </ul>
+        </h5>
+
+	<hr>
+		<h2>Liste des seances :</h2>
+		<br>           
+		<center>
+		<table class="table table-striped">
+	    	<thead>
+	    		<tr>
+	        		<th>Module</th>
+	        		<th>Date seance</th>
+	        		<th>Heure debut</th>
+	        		<th>Heure fin</th>
+	        		<th>Type seance</th>
+	      		</tr>
+	    	</thead>
+	    	<tbody>
+				<tr>
+                    <td> Annalyse </td>
+                    <td> 28/06/2023 </td>
+                    <td> 13:30 </td>
+                    <td> 16:30 </td>
+                    <td>Cours </td>
+				</tr>
+
+                <tr>
+                    <td> Annalyse </td>
+                    <td> 30/06/2023 </td>
+                    <td> 08:00 </td>
+                    <td> 12:00 </td>
+                    <td>Travaux pratique </td>
+				</tr>
+
+                <tr>
+                    <td> Reseaux Cisco </td>
+                    <td> 30/06/2023 </td>
+                    <td> 08:00 </td>
+                    <td> 12:00 </td>
+                    <td>Travaux pratique </td>
+				</tr>
+
+                <tr>
+                    <td> Reseaux Cisco </td>
+                    <td> 30/06/2023 </td>
+                    <td> 13:30 </td>
+                    <td> 16:30 </td>
+                    <td>Cours </td>
+				</tr>
+
+			</tbody>
+  		</table>
+			Nombre Total des Seance: 5
+			<br><br>
+	</center>
+
+	</div>

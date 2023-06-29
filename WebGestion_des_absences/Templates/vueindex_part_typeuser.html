@@ -1,0 +1,13 @@
+{% if Type == 'admin' %}
+
+    {% include 'admin_index.html' %}
+
+{% elif Type == 'enseignant' %}
+
+    {% include 'enseignant_index.html' %} 
+
+{% elif Type == 'etudiant' %}
+    
+    {% include 'etudiant_index.html' %} 
+
+{% endif %}

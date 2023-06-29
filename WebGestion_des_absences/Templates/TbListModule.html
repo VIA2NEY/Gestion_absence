@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <style type="text/css">
+
+        .disptext {
+            margin-left: 80px;
+        }
+
+        .tableau {
+            margin-left: 55px;
+            margin-right: 35px;
+            margin-bottom: 30px;
+        }
+
+        /* .bouttonexport{
+            margin-bottom: 30px;
+        } */
+
+    </style>
+
+</head>
+<body>
+    
+    {% include 'Include/includefor_TestAdmin.html' %}
+
+    <div class="disptext">
+        <h5>
+            Liste des modules
+        </h5>
+    </div>
+    <!-- Tableau -->
+    <div class="tableau">
+
+        <div class="table-responsive">
+            <table class="table table-striped table-sm">
+                <thead>
+                    <tr>
+                        <th scope="col">Id </th>
+                        <th scope="col">Module </th>
+                        <th scope="col">Modifier/Supprimer </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> OO1 </td> 
+                        <td>Anglais</td>
+                        
+                        
+                        <td>  <!--  b -->
+                            <button type="button" class="btn btn-default btn-sm">
+                                <a href="#">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                            <button type="button" class="btn btn-default btn-sm">
+                                <a href="#">
+                                <i class="bi bi-trash3"></i>
+                            </button>
+                        </td>
+                    
+                    </tr>
+
+                    <tr>
+                        <td> OO2 </td> 
+                        <td>Atelier Genie Logiciel (AGL)</td>
+                        
+                           
+                        <td>  <!--  b -->
+                            <button type="button" class="btn btn-default btn-sm">
+                                <a href="#">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                            <button type="button" class="btn btn-default btn-sm">
+                                <a href="#">
+                                <i class="bi bi-trash3"></i>
+                            </button>
+                        </td>
+                        
+                    </tr>
+
+                    <tr>
+                        <td> OO3 </td> 
+                        <td>Base de donnée I</td>
+                        
+                            
+                        <td>  <!--  b -->
+                            <button type="button" class="btn btn-default btn-sm">
+                                <a href="#">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                            <button type="button" class="btn btn-default btn-sm">
+                                <a href="#">
+                                <i class="bi bi-trash3"></i>
+                            </button>
+                        </td>
+                        
+                    </tr>
+
+                    <tr>
+                        <td> OO4 </td> 
+                        <td>Développement d'application mobile flutter/dart </td>
+                        
+                            
+                        <td>  <!--  b -->
+                            <button type="button" class="btn btn-default btn-sm">
+                                <a href="#">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                            <button type="button" class="btn btn-default btn-sm">
+                                <a href="#">
+                                <i class="bi bi-trash3"></i>
+                            </button>
+                        </td>
+                        
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+</html>

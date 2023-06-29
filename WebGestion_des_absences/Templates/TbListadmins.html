@@ -1,0 +1,375 @@
+<!-- admin.html -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+
+<div class="tableau">
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+            <thead>
+                <tr>
+                    <th scope="col">Pseudo </th>
+                    <th scope="col">nom </th>
+                    <th scope="col">Prenon </th>
+                    <th scope="col">Email </th>
+                    <th scope="col">Acces </th>
+                    <th scope="col">Changer le role </th>
+                    <th scope="col">Activer/Desactiver </th>
+                    <th scope="col">Modifier/Supprimer </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for admin in les_admin %}
+                <tr>
+                    <td>{{ admin.Pseudo }}</td>
+                    <td>{{ admin.nom }}</td>
+                    <td>{{ admin.prenom }}</td>
+                    <td>{{ admin.Email }}</td>
+                    <td>{{ admin.Acces }}</td>
+
+                    <td>
+                        <button type="button" class="btn btn-default btn-sm">
+                            <a href="#">
+                            <i class="bi bi-shuffle"></i>
+                        </button>
+                    </td>
+
+                    <td>  <!--  a -->
+                        <button type="button" class="btn btn-default btn-sm">
+                            <a href="#">
+                              <span class="bi bi-check-circle" aria-hidden="true"></span>
+                            </a>
+                          </button>
+                          
+                          <button type="button" class="btn btn-default btn-sm">
+                            <a href="#">
+                              <span class="bi bi-x-circle" aria-hidden="true"></span>
+                            </a>
+                          </button>
+                    </td>
+                    <td>  <!--  b -->
+                        <button type="button" class="btn btn-default btn-sm">
+                            <a href="#">
+                            <i class="bi bi-pencil-square"></i>
+                        </button>
+                        <button type="button" class="btn btn-default btn-sm">
+                            <a href="#">
+                            <i class="bi bi-trash3"></i>
+                        </button>
+                    </td>
+
+                </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+<!-- <h3>Liste des admins</h3>
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Pseudo</th>
+      <th scope="col">Nom</th>
+      <th scope="col">Prénom</th>
+      <th scope="col">Email </th>
+      <th scope="col">Acces </th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for admin in admins %}
+    <tr>
+      <td>{{ admin.Pseudo }}</td>
+      <td>{{ admin.nom }}</td>
+      <td>{{ admin.prenom }}</td>
+      <td>{{ admin.Email }}</td>
+      <td>{{ admin.Acces }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table> -->
+
+
+<!-- <div class="tableau">
+
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+            <thead>
+                <tr>
+                <th scope="col">Pseudo </th>
+                <th scope="col">nom </th>
+                <th scope="col">Prenon </th>
+                <th scope="col">Email </th>
+                <th scope="col">Acces </th>
+                <th scope="col">Changer le role </th>
+                <th scope="col">Activer/Desactiver </th>
+                <th scope="col">Modifier/Supprimer </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td>Billal</td>
+                <td>EL Houdagui</td>
+                <td>Bilal Attal</td>
+                <td>bilalelhoudagui@gmail.com</td>
+                <td>1</td>
+
+                <td>
+                    <button type="button" class="btn btn-default btn-sm">
+                        <a href="#">
+                        --><!-- <span class="glyphicon glyphicon-random" aria-hidden="true"></span> -->
+                        <!-- <i class="bi bi-shuffle"></i>
+                    </button>
+                </td>
+                <td>  --><!--  a --> 
+                    <!-- <button type="button" class="btn btn-default btn-sm">
+                        <a href="#">
+                          <span class="bi bi-check-circle" aria-hidden="true"></span>
+                        </a>
+                      </button>
+                      
+                      <button type="button" class="btn btn-default btn-sm">
+                        <a href="#">
+                          <span class="bi bi-x-circle" aria-hidden="true"></span>
+                        </a>
+                      </button>
+                </td>
+                <td>  --><!--  b --> 
+                    <!-- <button type="button" class="btn btn-default btn-sm">
+                        <a href="#">
+                        <i class="bi bi-pencil-square"></i>
+                    </button>
+                    <button type="button" class="btn btn-default btn-sm">
+                        <a href="#">
+                        <i class="bi bi-trash3"></i>
+                    </button>
+                </td>
+                
+                </tr>
+
+                <tr>
+                <td>Farouk</td>
+                <td>Danoumne</td>
+                <td>farouk</td>
+                <td>faroukDanoumne@gmail.com</td>
+                <td>0</td>
+
+                <td>
+                    <button type="button" class="btn btn-default btn-sm">
+                        <a href="#">
+                        <i class="bi bi-shuffle"></i>
+                    </button>
+                </td>
+                <td>  --><!--  a --> 
+                    <!-- <button type="button" class="btn btn-default btn-sm">
+                        <a href="#">
+                        <span class="bi bi-check-circle" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-default btn-sm">
+                        <a href="#">
+                        <span class="bi bi-x-circle" aria-hidden="true"></span>
+                    </button>
+                </td>
+                <td>  --><!--  b --> 
+                    <!-- <button type="button" class="btn btn-default btn-sm">
+                        <a href="#"> -->
+                        <!-- <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> -->
+                        <!-- <i class="bi bi-pencil-square"></i>
+                    </button>
+                    <button type="button" class="btn btn-default btn-sm">
+                        <a href="#"> -->
+                        <!-- <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> -->
+                        <!-- <i class="bi bi-trash3"></i>
+
+                    </button>
+                </td>
+                
+                </tr>
+
+                <tr>
+                <td>Vianney</td>
+                <td>Yao</td>
+                <td>Kouame Ange vianney</td>
+                <td>kouameangeV11@gmail.com</td>
+                <td>1</td>
+
+                <td>
+                    <button type="button" class="btn btn-default btn-sm">
+                        <a href="#">
+                        <i class="bi bi-shuffle"></i>
+                    </button>
+                </td>
+                <td>  --><!-- a -->
+                    <!-- <button type="button" class="btn btn-default btn-sm">
+                        <a href="#">
+                        <span class="bi bi-check-circle" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-default btn-sm">
+                        <a href="#">
+                        <span class="bi bi-x-circle" aria-hidden="true"></span>
+                    </button>
+                </td>
+                <td> --> <!--  b -->
+                    <!-- <button type="button" class="btn btn-default btn-sm">
+                        <a href="#">
+                        <i class="bi bi-pencil-square"></i>
+                    </button>
+                    <button type="button" class="btn btn-default btn-sm">
+                        <a href="#">
+                        <i class="bi bi-trash3"></i>
+                    </button>
+                </td>
+                
+                </tr>
+
+                <tr>
+                <td>1,003</td>
+                <td>information</td>
+                <td>placeholder</td>
+                <td>illustrative</td>
+                <td>0</td>
+
+                <td>
+                    <button type="button" class="btn btn-default btn-sm">
+                        <a href="#">
+                        <i class="bi bi-shuffle"></i>
+                    </button>
+                </td> 
+                <td>  --><!--  a --> 
+                    <!-- <button type="button" class="btn btn-default btn-sm">
+                        <a href="#">
+                        <span class="bi bi-check-circle" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-default btn-sm">
+                        <a href="#">
+                        <span class="bi bi-x-circle" aria-hidden="true"></span>
+                    </button>
+                </td>
+                <td>  --><!--  b --> 
+                    <!-- <button type="button" class="btn btn-default btn-sm">
+                        <a href="#">
+                        <i class="bi bi-pencil-square"></i>
+                    </button>
+                    <button type="button" class="btn btn-default btn-sm">
+                        <a href="#">
+                        <i class="bi bi-trash3"></i>
+                    </button>
+                </td>
+                
+                </tr>
+
+                <tr>
+                <td>1,004</td>
+                <td>text</td>
+                <td>random</td>
+                <td>layout</td>
+                <td>1</td>
+
+                <td>
+                    <button type="button" class="btn btn-default btn-sm">
+                        <a href="#">
+                        <i class="bi bi-shuffle"></i>
+                    </button>
+                </td>
+                <td>  --><!--  a --> 
+                    <!-- <button type="button" class="btn btn-default btn-sm">
+                        <a href="#">
+                        <span class="bi bi-check-circle" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-default btn-sm">
+                        <a href="#">
+                        <span class="bi bi-x-circle" aria-hidden="true"></span>
+                    </button>
+                </td>
+                <td>  --><!--  b --> 
+                    <!-- <button type="button" class="btn btn-default btn-sm">
+                        <a href="#">
+                        <i class="bi bi-pencil-square"></i>
+                    </button>
+                    <button type="button" class="btn btn-default btn-sm">
+                        <a href="#">
+                        <i class="bi bi-trash3"></i>
+                    </button>
+                </td>
+                
+                </tr>
+
+                <tr>
+                <td>1,005</td>
+                <td>dashboard</td>
+                <td>irrelevant</td>
+                <td>text</td>
+                <td>1</td>
+                <td>
+                    <button type="button" class="btn btn-default btn-sm">
+                        <a href="#">
+                        <i class="bi bi-shuffle"></i>
+                    </button>
+                </td>
+                <td>  --><!--  a --> 
+                    <!-- <button type="button" class="btn btn-default btn-sm">
+                        <a href="#">
+                        <span class="bi bi-check-circle" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-default btn-sm">
+                        <a href="#">
+                        <span class="bi bi-x-circle" aria-hidden="true"></span>
+                    </button>
+                </td>
+                <td>  --><!--  b -->
+                    <!-- <button type="button" class="btn btn-default btn-sm">
+                        <a href="#">
+                        <i class="bi bi-pencil-square"></i>
+                    </button>
+                    <button type="button" class="btn btn-default btn-sm">
+                        <a href="#">
+                        <i class="bi bi-trash3"></i>
+                    </button>
+                </td>
+
+                </tr>
+
+                <tr>
+                <td>1,006</td>
+                <td>board</td>
+                <td>illustrative</td>
+                <td>rich</td>
+                <td>0</td>
+
+                <td>
+                    <button type="button" class="btn btn-default btn-sm">
+                        <a href="#">
+                        <i class="bi bi-shuffle"></i>
+                    </button>
+                </td>
+                <td>  --><!--  a -->  
+                    <!-- <button type="button" class="btn btn-default btn-sm">
+                        <a href="#">
+                        <span class="bi bi-check-circle" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-default btn-sm">
+                        <a href="#">
+                        <span class="bi bi-x-circle" aria-hidden="true"></span>
+                    </button>
+                </td>
+                <td>  --><!--  b --> 
+                    <!-- <button type="button" class="btn btn-default btn-sm">
+                        <a href="#">
+                        <i class="bi bi-pencil-square"></i>
+                    </button>
+                    <button type="button" class="btn btn-default btn-sm">
+                        <a href="#">
+                        <i class="bi bi-trash3"></i>
+                    </button>
+                </td>
+                
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+</div>  -->

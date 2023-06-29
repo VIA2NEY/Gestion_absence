@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
+
+
+    <title>Creation d'un etudiant</title>
+
+    <style type="text/css">
+        .formulaire {
+            margin-top: 20px;
+            margin-left: 320px;
+            margin-right: 60px;
+            margin-bottom: 30px;
+        }
+
+        .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+    </style>
+
+</head>
+<body>
+    {% include 'Include/navbar_viewadmin.html' %}
+
+    <div class="formulaire ">
+        <div class="col-md-7 col-lg-8 bg-light ">
+            <h4 class="mb-3">Creation d'un compte etudiant</h4>
+            <form class="needs-validation" novalidate>
+
+                <div class="col-sm-8">
+                    <label for="telephone" class="form-label">N° identifiant</label>
+                    <input type="text" class="form-control" id="telephone" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                        Un numero d'indentification de l'etudiant est obligatoire.
+                    </div>
+                </div>
+
+                <div class="row g-3">
+
+                    <div class="col-sm-6">
+                        <label for="firstNameEtd" class="form-label">Nom</label>
+                        <input type="text" class="form-control" id="firstNameEtd" placeholder="" value="" required>
+                        <div class="invalid-feedback">
+                            Ce champ est obligatoire.
+                        </div>
+                    </div>
+        
+                    <div class="col-sm-6">
+                        <label for="lastNameEtd" class="form-label">Prenom</label>
+                        <input type="text" class="form-control" id="lastNameEtd" placeholder="" value="" required>
+                        <div class="invalid-feedback">
+                            Ce champ est obligatoire.
+                        </div>
+                    </div>
+                </div> 
+                
+                <!-- Telephone & Address -->
+                <div class="row g-3">
+
+                    <div class="col-sm-6">
+                        <label for="telephone" class="form-label">N° de Telephone</label>
+                        <input type="text" class="form-control" id="telephone" placeholder="" value="" required>
+                        <div class="invalid-feedback">
+                            Un numero valide est obligatoire.
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-6">
+                        <label for="addressetd" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="addressetd" placeholder="Grand-Bassam les rosiers" required>
+                        <div class="invalid-feedback">
+                            Entrez l'adresse de l'etudiant.
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Date de naissance -->
+                <div class="input-row col-sm-6">
+                    <label for="depart_date">Date de naissance : </label>
+                    <input type="date" name="DepartDate" min="{{min_date}}" max="{{max_date}}" id="depart_date" placeholder="Date" class="form-control mr-sm-2" value="{{depart_date}}">
+                </div>
+                <br>
+
+                <!-- Classe et niveau -->
+                <div class="row g-3">
+                    <div class="col-md-5">
+                        <label for="classe" class="form-label">Classe</label>
+                        <select class="custom-select" id="classe" required>
+                          <option value="">Choisir...</option>
+                          <option>Busness administration</option>
+                          <option>Computer Science</option>
+                          <option>Genie civil</option>
+                        </select>
+                        <div class="invalid-feedback">
+                          Selectionner une classe.
+                        </div>
+                    </div>
+    
+                    <div class="col-md-3">
+                        <label for="niveau" class="form-label">Niveau :</label>
+                        <select class="custom-select" id="niveau" required>
+                          <option value="">Choisir...</option>
+                          <option value="Licence 1">Licence 1</option>
+                          <option value="Licence 2">Licence 2</option>
+                          <option value="Licence 3">Licence 3</option>
+                        </select>
+                        <div class="invalid-feedback">
+                          Please provide a valid state.
+                        </div>
+                    </div>
+                </div>
+                <br>
+                
+
+                <div class="col-12">
+                    <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+                    <div class="input-group has-validation">
+  
+                      <span class="input-group-text">@</span>
+                      <input type="email" class="form-control" id="email" placeholder="etudiant@iit.com">
+                      <div class="invalid-feedback">
+                          Entrez une addresse email valide for updates.
+                      </div>
+  
+                    </div>
+                    
+                </div>
+                <br>
+
+                <div class="col-12">
+                  <label for="username" class="form-label">Nom d'utilisateur</label>
+                  <div class="input-group has-validation">
+                    <input type="text" class="form-control" id="username" placeholder="Nom d'utilisateur" required>
+                    <div class="invalid-feedback">
+                      Votre nom d'utilisation is required.
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="row g-3">
+
+                    <div class="col-sm-6">
+                        <label for="firstName" class="form-label">Mot de passe</label>
+                        <input type="password" class="form-control" id="motdepass" placeholder="" value="" required>
+                        <div class="invalid-feedback">
+                            Un mot de passe valide est obligatoire.
+                        </div>
+                    </div>
+        
+                    <div class="col-sm-6">
+                        <label for="lastName" class="form-label">Confirmation</label>
+                        <input type="password" class="form-control" id="confirmationmdp" placeholder="" value="" required>
+                        <div class="invalid-feedback">
+                            La cofirmation du mot de passe est obligatoire.
+                        </div>
+                    </div>
+                </div> 
+                <br>
+
+                <div class="col-sm-6">
+                    <label for="lastName" class="form-label">Photo</label>
+                    <input type="file" name="inpFile" id="inpFile">
+                </div>
+      
+              <hr class="my-4">
+
+              <div class="form-group text-right">
+                <div class="col-sm-12">
+                    <input name="submit" type="submit" class="btn btn-primary " value="Enregistrer" />
+                    <input name="cancel" type="reset" class="btn btn-default " value="Annuler" />
+                </div>
+              </div>
+                
+      
+              <!-- <button class="w-100 btn btn-primary btn-lg" type="submit">Enregistrer</button> -->
+            </form>
+      
+            
+          </div>
+    </div>
+    
+
+
+    {% include 'Include/footer_view.html' %}
+    
+    
+
+</body>
+</html>
